@@ -71,6 +71,43 @@ const App = () => {
       });
   };
 
+  const reverse=(str)=>{
+    let newStr = ""
+    for(let i=str.length-1; i>=0; i--){
+        newStr +=str[i];
+    }
+    return newStr 
+  }
+
+  const input = "Appsfreedom is renamed as pillir"
+
+  const result = reverse(input)
+  
+  console.log(result)
+  let a=[10,2,5,25,3,45,67,2];
+  
+  //descending order sorting without predefined functions
+  
+  //sort in descending
+
+  function SortFn(arr){
+    let done = false;
+    while(!done){
+      done = true;
+      for(let i=0; i<arr.length; i++){
+        if(arr[i-1] > arr[i]){
+          done = false;
+          let tempVar = arr[i-1]
+          arr[i-1] = arr[i];
+          arr[i] = tempVar
+        }
+      }
+    }
+    return arr;
+  }
+  SortFn(a)
+  console.log(a);
+
   return (
     <div className="app">
       <div className="app__left">
